@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body {
+    background-color:black;
+    color: dimgrey;
+}
+
+header {
+    height: 100px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.conteudo {
+    height: 80vh;
+}
+
+aside {
+    background-color: #222;
+}
+
+footer {
+    height: 10vh;
+    border-top: thin solid #333;
+}
