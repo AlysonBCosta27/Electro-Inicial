@@ -10,10 +10,23 @@ function createWindow() {
   })
 
   win.loadFile('src/index.html');
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools();
 }
 
 const templateMenu = [
+  {
+    label: 'Início',
+    submenu:
+      [
+        {
+          label: 'Apresentação',
+          click(menuItem, browserWindow, event) {
+            browserWindow.loadURL(`file://${__dirname}/index.html`);
+          }
+        },
+        { label: 'Piloto' }
+      ]
+  },
   {
     label: 'Cadastro',
     submenu:
@@ -31,14 +44,20 @@ const templateMenu = [
     label: 'Relatório',
     submenu:
       [
-        { 
+        {
           label: 'Campeonatos',
-          click: function() {
-            shell.openExternal('https://www.electronjs.org/');
+          click: function () {
+            shell.openExternal('http://www.superdriftbrasil.com.br/super-drift-brasil-2020/');
           },
         },
         { label: 'Pilotos' }
       ]
+  },
+  {
+    label: 'Entre em contato',
+    click(menuItem, browserWindow, event) {
+      browserWindow.loadURL(`file://${__dirname}/contato.html`);
+    }
   }
 ]
 

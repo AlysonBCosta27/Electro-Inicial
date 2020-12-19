@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <title>Super Drift Brasil</title>
+</head>
+
+<body>
+  <h1>Compra de ingressos</h1>
+  <form>
+    <p>Valor do ingresso: R$ <span id="valor">25,00</span></p>
+    <div>
+      <label for="nome">Nome: </label>
+      <input type="text" id="nome" nome="nome" />
+    </div>
+    <div>
+      <label for="qtd">Quantidade: </label>
+      <input type="number" id="qtd" />
+    </div>
+    <p>Total: R$ <span id="total"></span></p>
+    <button id="comprar" type="button">Comprar</button>
+  </form>
+  <script src="./utils.js"></script>
+</body>
+</html>
